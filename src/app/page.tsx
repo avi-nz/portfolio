@@ -103,11 +103,9 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
-                    {education.start && (
-                      <span>
-                        {education.start} - {education.end}
-                      </span>
-                    )}
+                    <span>
+                      {education.start} - {education.end}
+                    </span>
                   </div>
                 </Link>
               </BlurFade>
