@@ -1,5 +1,4 @@
 import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
@@ -69,14 +68,12 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
-              {children}
-            </div>
-            <Navbar />
-          </TooltipProvider>
-        </ThemeProvider>
+        <TooltipProvider delayDuration={0}>
+          <div className="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+            {children}
+          </div>
+          <Navbar />
+        </TooltipProvider>
       </body>
     </html>
   );
