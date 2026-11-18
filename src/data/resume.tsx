@@ -19,9 +19,11 @@ export const DATA = {
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "**Engineering Science @ The University of Auckland**\\\nMachine Learning & Mathematical Modelling",
+  plainDescription:
+    "Engineering Science @ The University of Auckland | Machine Learning & Mathematical Modelling",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I'm studying **Engineering Science at the University of Auckland**, with interests spanning **quantitative development**, **mathematical modelling**, and **systems programming**. I enjoy exploring how things work, from mathematical models to computer architecture, and **turning ideas into practical projects**. Outside university, I create **educational content**.",
   avatarUrl: "/avishai.jpg",
   skills: [
     { name: "React", icon: ReactLight },
@@ -167,6 +169,62 @@ export const DATA = {
       logoUrl: "/rangitoto.jpg",
       start: "2020",
       end: "2024",
+    },
+  ],
+  projects: [
+    {
+      title: "NBA Playoff Prediction Simulation",
+      href: "https://github.com/avi-nz/NBA-Playoff-Prediction-Simulation",
+      dates: "Jun 2026 - Present",
+      active: true,
+      description:
+        "How predictable are the NBA playoffs? Built six forecasting models using Elo ratings, Monte Carlo bracket simulation, injury modelling and statistical testing, using only information available before the playoffs begin. The surprise: none of the basketball-specific features beat the plain Elo baseline, a small-scale lesson in [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html).",
+      technologies: ["Python", "Monte Carlo", "Elo Ratings", "Statistics"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/avi-nz/NBA-Playoff-Prediction-Simulation",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Rare Event Simulation Framework",
+      href: "https://github.com/avi-nz/Rare-Event-Simulation-Framework",
+      dates: "Jun 2026 - Present",
+      active: true,
+      description:
+        "Estimating extremely unlikely events, with probabilities of 10⁻⁶ or lower, where standard Monte Carlo breaks down. Compares Monte Carlo, importance sampling, cross-entropy optimisation and adaptive machine learning methods, with applications to Value at Risk, Expected Shortfall and portfolio ruin.",
+      technologies: ["C++", "Python", "Monte Carlo", "Importance Sampling"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/avi-nz/Rare-Event-Simulation-Framework",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "EVolocity EV Go Kart",
+      href: "https://github.com/avi-nz/evolocity-ev-project",
+      dates: "Jan 2022 - Nov 2024",
+      active: false,
+      description:
+        "Designed and built a functional electric race kart for the EVolocity competition. Fabricated the MIG-welded steel chassis, designed a custom steering wheel moulded to the driver's hand using CAD, CNC and 3D printing, and partnered with McMullen & Wing to make a carbon fibre floor.",
+      technologies: ["CAD", "CNC", "3D Printing", "MIG Welding", "Carbon Fibre"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/avi-nz/evolocity-ev-project",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
     },
   ],
   hackathons: [

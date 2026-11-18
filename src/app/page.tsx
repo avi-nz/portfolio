@@ -7,6 +7,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
+import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
 
@@ -25,11 +26,13 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl [&_strong]:font-semibold [&_strong]:text-foreground">
+                  <Markdown components={{ p: ({ children }) => <>{children}</> }}>
+                    {DATA.description}
+                  </Markdown>
+                </p>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
@@ -128,6 +131,11 @@ export default function Page() {
             ))}
           </div>
         </div>
+      </section>
+      <section id="projects">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <ProjectsSection />
+        </BlurFade>
       </section>
       <section id="hackathons">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
