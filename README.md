@@ -1,47 +1,53 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Avishai Narsey
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+My personal portfolio: [avishainarsey.com](https://avishainarsey.com)
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Engineering Science student at the University of Auckland, interested in machine learning, mathematical modelling and quantitative development. The site covers my education, work experience, skills, projects and hackathons.
 
-# Features
+## Tech
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+- [Next.js](https://nextjs.org/) and React
+- [Tailwind CSS](https://tailwindcss.com/) with [shadcn/ui](https://ui.shadcn.com/) and [Magic UI](https://magicui.design/) components
+- [Geist](https://vercel.com/font) fonts
+- Deployed on [Vercel](https://vercel.com/)
 
-# Getting Started Locally
+## Running locally
 
-1. Clone this repository to your local machine:
+```bash
+pnpm install
+pnpm dev
+```
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+Then open [http://localhost:3000](http://localhost:3000).
 
-2. Move to the cloned directory
+## Editing content
 
-   ```bash
-   cd portfolio
-   ```
+Almost everything on the page lives in [`src/data/resume.tsx`](src/data/resume.tsx): name, about text, education, work experience, skills, projects, hackathons and social links. Images and logos are in [`public/`](public/).
 
-3. Install dependencies:
+## Credits
 
-   ```bash
-   pnpm install
-   ```
+Based on the open-source [portfolio template](https://github.com/dillionverma/portfolio) by Dillion Verma, used under the MIT License:
 
-4. Start the local Server:
+```
+MIT License
 
-   ```bash
-   pnpm dev
-   ```
+Copyright (c) 2024 Dillion Verma
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-# License
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```

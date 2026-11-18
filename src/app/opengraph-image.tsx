@@ -28,6 +28,19 @@ const getFontData = async () => {
     }
 };
 
+// Load the avatar from the project files rather than over the network, so the
+// share image works locally and before the domain is live. Keep in sync with DATA.avatarUrl.
+const getAvatarData = async () => {
+    try {
+        return await fetch(new URL("../../public/avishai.jpg", import.meta.url)).then((res) =>
+            res.arrayBuffer()
+        );
+    } catch (error) {
+        console.error("Failed to load avatar:", error);
+        return null;
+    }
+};
+
 const styles = {
     outerWrapper: {
         height: "100%",
@@ -63,7 +76,7 @@ const styles = {
         left: "40px",
         display: "flex",
         alignItems: "center",
-        zIndex: "2",
+        zIndex: 2,
     },
     mainContainer: {
         display: "flex",
@@ -73,7 +86,7 @@ const styles = {
         height: "100%",
         width: "100%",
         position: "relative",
-        zIndex: "1",
+        zIndex: 1,
     },
     image: {
         width: "140px",
@@ -107,25 +120,33 @@ const styles = {
 
 export default async function Image() {
     try {
-        const fontData = await getFontData();
-        const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
-            : undefined;
+        const [fontData, avatarData] = await Promise.all([getFontData(), getAvatarData()]);
 
         return new ImageResponse(
             (
                 <div style={styles.outerWrapper}>
                     <div style={styles.middleWrapper}>
                         <div style={styles.wrapper}>
-                            {imageUrl && (
+                            {avatarData && (
                                 <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt={DATA.name} style={styles.image} />
+                                    <img
+                                        // next/og accepts raw image bytes as src
+                                        src={avatarData as unknown as string}
+                                        alt={DATA.name}
+                                        width={140}
+                                        height={140}
+                                        style={styles.image}
+                                    />
                                 </div>
                             )}
                             <div style={styles.mainContainer}>
                                 <div style={styles.title}>{DATA.name}</div>
                                 {DATA.plainDescription && (
-                                    <div style={styles.description}>{DATA.plainDescription}</div>
+                                    <div style={{ ...styles.description, display: "flex", flexDirection: "column" }}>
+                                        {DATA.plainDescription.split(" | ").map((line) => (
+                                            <div key={line}>{line}</div>
+                                        ))}
+                                    </div>
                                 )}
                             </div>
                         </div>

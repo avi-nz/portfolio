@@ -18,9 +18,9 @@ import { CLogo, CppLogo, MatlabLogo } from "@/components/ui/svgs/logo-image";
 export const DATA = {
   name: "Avishai Narsey",
   initials: "AN",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  url: "https://avishainarsey.com",
+  location: "Auckland, New Zealand",
+  locationLink: "https://www.google.com/maps/place/Auckland",
   description:
     "**Engineering Science @ The University of Auckland**\\\nMachine Learning & Mathematical Modelling",
   plainDescription:
@@ -46,8 +46,6 @@ export const DATA = {
     { name: "Computer Architecture", icon: Cpu },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
     social: {
       GitHub: {
         name: "GitHub",
@@ -69,25 +67,11 @@ export const DATA = {
         icon: Icons.substack,
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: false,
-      },
       Youtube: {
         name: "Youtube",
         url: "https://www.youtube.com/@theaceify",
         icon: Icons.youtube,
         navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-
-        navbar: false,
       },
     },
   },
