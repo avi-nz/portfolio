@@ -6,9 +6,7 @@ import {
   Cpu,
   Dice5,
   Grid3x3,
-  HomeIcon,
   Network,
-  NotebookIcon,
   SquareFunction,
   Target,
   Waves,
@@ -47,10 +45,6 @@ export const DATA = {
     { name: "Solid & Fluid Mechanics", icon: Waves },
     { name: "Computer Architecture", icon: Cpu },
   ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://avishainarsey.substack.com/", icon: NotebookIcon, label: "Blog" },
-  ],
   contact: {
     email: "hello@example.com",
     tel: "+123456789",
@@ -67,6 +61,12 @@ export const DATA = {
         url: "https://www.linkedin.com/in/avishai-narsey/",
         icon: Icons.linkedin,
 
+        navbar: true,
+      },
+      Substack: {
+        name: "Substack",
+        url: "https://avishainarsey.substack.com/",
+        icon: Icons.substack,
         navbar: true,
       },
       X: {
