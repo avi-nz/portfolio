@@ -1,16 +1,21 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
-import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
-import { Typescript } from "@/components/ui/svgs/typescript";
-import { Nodejs } from "@/components/ui/svgs/nodejs";
+import {
+  Box,
+  Calculator,
+  ChartLine,
+  Cpu,
+  Dice5,
+  Grid3x3,
+  HomeIcon,
+  Network,
+  NotebookIcon,
+  SquareFunction,
+  Target,
+  Waves,
+  Workflow,
+} from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
-import { Postgresql } from "@/components/ui/svgs/postgresql";
-import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
+import { CLogo, CppLogo, MatlabLogo } from "@/components/ui/svgs/logo-image";
 
 export const DATA = {
   name: "Avishai Narsey",
@@ -26,17 +31,21 @@ export const DATA = {
     "I'm studying **Engineering Science at the University of Auckland**, with interests spanning **quantitative development**, **mathematical modelling**, and **systems programming**. I enjoy exploring how things work, from mathematical models to computer architecture, and **turning ideas into practical projects**. Outside university, I create **educational content**.",
   avatarUrl: "/avishai.jpg",
   skills: [
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
-    { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
-    { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
+    { name: "C", icon: CLogo },
+    { name: "C++", icon: CppLogo },
+    { name: "MATLAB", icon: MatlabLogo },
+    { name: "Linear Programming", icon: Target },
+    { name: "Operations Research", icon: Network },
+    { name: "Simulation Modelling", icon: Workflow },
+    { name: "Differential Equations", icon: SquareFunction },
+    { name: "Linear Algebra", icon: Grid3x3 },
+    { name: "Numerical Methods", icon: Calculator },
+    { name: "Probability & Stochastic Processes", icon: Dice5 },
+    { name: "Statistical Modelling & Regression", icon: ChartLine },
+    { name: "Computational Modelling", icon: Box },
+    { name: "Solid & Fluid Mechanics", icon: Waves },
+    { name: "Computer Architecture", icon: Cpu },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -187,7 +196,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/nba-bracket.svg",
       video: "",
     },
     {
@@ -205,7 +214,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/rare-event.svg",
       video: "",
     },
     {
@@ -223,7 +232,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/evolocity.jpg",
       video: "",
     },
   ],
